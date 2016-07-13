@@ -4,7 +4,7 @@
     <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8">-->
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
     <title>Sample Web Page</title>
-    <link href="./? bigbales_418Bje.rec_files/default.css" rel="stylesheet" type="text/css">
+    <link href="./css/recplayer.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -28,6 +28,9 @@
     </div>
 </div>
 
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/amd.js"></script>
+<script type="text/javascript" src="js/require.js"></script>
 <script type="text/javascript" src="js/controller.js"></script>
 <script type="text/javascript" src="js/levReader.js"></script>
 <script type="text/javascript" src="js/binReader.js"></script>
@@ -40,10 +43,9 @@
 <script type="text/javascript" src="js/recRender.js"></script>
 <script type="text/javascript" src="js/objRender.js"></script>
 <script type="text/javascript" src="js/get.js"></script>
-<script type="text/javascript" src="js/amd.js"></script>
 <script>
     window.onload = function(){
-    require(["controller"], function(controller){
+    require(["js/controller"], function(controller){
         controller("test/lev", "images/lgr", document.getElementById("recplay"), document)(function(cnt){
             cnt.resize(1024, 768);
             cnt.loadReplay("test/bigbales_418Bje.rec");
